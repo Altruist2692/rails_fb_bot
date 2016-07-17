@@ -1,6 +1,9 @@
 class ProcessRequestController < ApplicationController
 	def index
-		logger.debug "PARAMS => >>>>> #{params}"
-		@hub_challenge = params[:hub_challenge]
+		if params[‘hub.verify_token’] == “mytoken”
+		 render text: params[‘hub.challenge’] and return
+		else
+		 render text: ‘error’ and return
+		end
 	end
 end
