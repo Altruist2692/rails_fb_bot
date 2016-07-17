@@ -1,6 +1,6 @@
 class ProcessRequestController < ApplicationController
 	def index
-		@message = params[‘hub.challenge’]
-	 	render text: @message and return
+		@message = params['hub.challenge']
+	 	render text: @message
 	end
 end
