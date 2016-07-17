@@ -20,9 +20,8 @@ class ProcessRequestController < ApplicationController
           )
         end
       end
-  end
-  
-    render nothing: true
+      return
+    end
   end
 
   def webhook
