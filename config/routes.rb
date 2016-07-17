@@ -1,5 +1,6 @@
 Rails.application.routes.draw do
   root "process_request#index"
+  match "/" => "process_request#index", via: [:get, :post]
   get 'process_request/webhook' => 'process_request#webhook'
   post 'process_request/webhook' => 'process_request#receive_message'
   # The priority is based upon order of creation: first created -> highest priority.
