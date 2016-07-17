@@ -1,5 +1,6 @@
 class ProcessRequestController < ApplicationController
   def index
+    logger.debug "#{params}"
     if params[:entry]
       messaging_events = params[:entry][0][:messaging]
       messaging_events.each do |event|
