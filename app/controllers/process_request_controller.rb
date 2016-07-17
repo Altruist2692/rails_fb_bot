@@ -1,0 +1,2 @@
+class ProcessRequestController < ApplicationController
+end
